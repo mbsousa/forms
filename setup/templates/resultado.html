@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h1>Cadastro Concluído</h1>
+    <p><strong>Nome:</strong> {{ usuario.nome }}</p>
+    <p><strong>E-mail:</strong> {{ usuario.email }}</p>
+    <p><strong>Telefone:</strong> {{ usuario.telefone }}</p>
+    <p><strong>Área da Organização:</strong> {{ usuario.get_area_organizacao_display }}</p>
+    <p><strong>Senha Gerada:</strong> {{ usuario.senha }}</p>  <!-- Senha gerada -->
+</body>
+</html>

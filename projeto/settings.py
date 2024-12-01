@@ -28,6 +28,16 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Configurações de e-mail no Django
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Servidor SMTP do Gmail
+EMAIL_PORT = 587  # Porta de envio de e-mails (usa STARTTLS)
+EMAIL_USE_TLS = True  # TLS para segurança
+EMAIL_HOST_USER = 'seu_email@gmail.com'  # Substitua pelo seu e-mail
+EMAIL_HOST_PASSWORD = 'sua_senha_de_app'  # Senha de aplicativo (não a senha do Gmail)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'setup',
 ]
 
 MIDDLEWARE = [
